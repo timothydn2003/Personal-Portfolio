@@ -9,6 +9,7 @@
 .login-form{
   padding: 1rem;
 }
-.login-form-input{
-  margin-bottom: 10px;
+.username-input, .password-input{
+  margin-bottom: 20px;
 }
+
