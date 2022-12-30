@@ -5,23 +5,35 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from './Sections/landing';
 import Footer from './Sections/Footer';
 import { useState, createContext } from 'react'
+import Projects from './Sections/Projects';
+import Navigation2 from './Sections/Nav2';
 
 export const AppContext = createContext();
-function Home() {
+const Home = (props) => {
   const[username, setUsername] = useState('');
   const[password,setPassword] = useState('');
 
   const log = () => {
-    console.log(username)
-    console.log(password)
-
+    props.setLogin(true)
+  }
+  const logout = () => {
+    setUsername('')
+    setPassword('')
+    props.setLogin(false)
   }
   return (
     <div className='home-page'>
         <AppContext.Provider value={{setUsername, setPassword}}>
-          <Navigation />
-          <Landing />
-          <Footer log = {log}/>
+          <section id='landing-page'>
+           {props.login?<Navigation2/>:<Navigation/>}
+            <Landing />
+          </section>
+          <section id='projects-page'>
+            <Projects/>
+          </section>
+          <section id='contact-page'>
+            <Footer log = {log}/>
+          </section>
         </AppContext.Provider>
     </div>
   )

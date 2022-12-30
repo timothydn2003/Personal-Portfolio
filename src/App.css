@@ -12,4 +12,9 @@
 .username-input, .password-input{
   margin-bottom: 20px;
 }
-
+#landing-page{
+  height: 100vh;
+}
+#projects-page{
+  height: 100vh;
+}

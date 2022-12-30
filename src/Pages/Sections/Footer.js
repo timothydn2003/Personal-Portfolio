@@ -60,7 +60,7 @@ return (
       <form className='login-form' onSubmit={stop}>
           <Row className='username-input'>
             <Col>
-              <TextField id="filled-basic" label="Username" variant="filled" onChange={(e) => setUsername(e.target.value)}/>
+              <TextField id="filled-basic" label="Username" variant="filled" onChange={(e) => setUsername(e.target.value)} required/>
             </Col>
           </Row>
           <Row className='password-input'>
@@ -83,11 +83,11 @@ return (
                   </IconButton>
                   </InputAdornment>
               }
-              />
+              required/>
             </FormControl>
             </Col>
           </Row>
-          <Button onClick={props.log} variant="outlined">Login</Button>
+          <Button type='submit' onClick={props.log} variant="outlined">Login</Button>
       </form>
   </Box>
 </Modal>

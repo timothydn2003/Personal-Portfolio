@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Navigation() {
+function Navigation2() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -14,10 +14,8 @@ function Navigation() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#projects-page">Projects</Nav.Link>
-            <Nav.Link eventKey={2} href="#contact-page">
-              Contact
-            </Nav.Link>
+            <Nav.Link href="/addProject">Add Projects</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -25,4 +23,4 @@ function Navigation() {
   )
 }
 
-export default Navigation
+export default Navigation2
