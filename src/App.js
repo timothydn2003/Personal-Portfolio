@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path={'/'} element = <Home setLogin = {setLogin} login = {login}/>/>
-          <Route path={'/addProject'} element = {<Login/>}/>
+          <Route path={'/'} element = {<Home setLogin = {setLogin} login = {login}/>}/>
+          <Route path={'/addProject'} element = {login?<Login/>:<Home/>}/>
         </Routes>
       </Router>
 

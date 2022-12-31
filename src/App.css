@@ -18,3 +18,16 @@
 #projects-page{
   height: 100vh;
 }
+.login-form{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 500px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  margin-top: 20vh;
+  border: 2px solid grey;
+}
+.login-form h1{
+  font-size: 20px;
+}
