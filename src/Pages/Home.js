@@ -25,7 +25,7 @@ const Home = (props) => {
     <div className='home-page'>
         <AppContext.Provider value={{setUsername, setPassword}}>
           <section id='landing-page'>
-           {props.login?<Navigation2/>:<Navigation/>}
+           {props.login?<Navigation2 logout = {logout}/>:<Navigation/>}
             <Landing />
           </section>
           <section id='projects-page'>

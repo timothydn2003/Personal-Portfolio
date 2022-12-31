@@ -5,11 +5,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {LinkContainer} from 'react-router-bootstrap'
 
-function Navigation2() {
+const Navigation2 = (props) => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Timothy Doan</Navbar.Brand>
+        <LinkContainer to= '/'>
+            <Navbar.Brand>Timothy Doan</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -18,7 +20,7 @@ function Navigation2() {
             <LinkContainer to = '/addProject'>
               <Nav.Link>Add Projects</Nav.Link>
             </LinkContainer>
-            <Nav.Link href="/">Home</Nav.Link>
+            <button className='logout-btn' onClick={props.logout}><Nav.Link href="/">Logout</Nav.Link></button>
           </Nav>
         </Navbar.Collapse>
       </Container>

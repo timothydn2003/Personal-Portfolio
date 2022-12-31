@@ -5,14 +5,14 @@ import Navigation2 from './Sections/Nav2'
 import '../App.css'
 import { Col, Row } from 'react-bootstrap'
 
-function Login() {
+const Login = () => {
   const stop = (event) => {
     event.preventDefault()
   }
   return (
     <div>
       <Navigation2/>
-    <div className='login-form'>
+    <div className='project-form'>
       <form onSubmit={stop}>
         <h1>Add a New Project</h1>
         <div className='login-form-inputs'>

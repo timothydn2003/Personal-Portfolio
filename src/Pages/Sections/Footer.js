@@ -65,7 +65,7 @@ return (
           </Row>
           <Row className='password-input'>
             <Col>
-            <FormControl sx={{ width: '23ch' }} variant="filled">
+            <FormControl sx={{ width: '19ch' }} variant="filled">
               <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
               <FilledInput
               onChange={(e) => setPassword(e.target.value)}
