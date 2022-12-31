@@ -49,7 +49,7 @@ const Footer = (props) => {
   }
 return (
   <div>
-  <button onClick={handleOpen}>Login</button>
+  <button onClick={handleOpen}><footer>@Timothy Doan 2022</footer></button>
   <Modal
   open={open}
   onClose={handleClose}

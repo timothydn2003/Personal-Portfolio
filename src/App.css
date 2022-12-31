@@ -20,18 +20,19 @@
 }
 .project-form{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 500px;
-  height: 300px;
+  width: 50%;
+  height: 40%;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
   margin-top: 20vh;
   border: 2px solid grey;
 }
-.login-form h1{
-  font-size: 20px;
+.project-form h1{
+  font-size: 30px;
 }
 .logout-btn{
   background-color: transparent;
   border: none;
 }
+
