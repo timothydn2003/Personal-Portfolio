@@ -19,48 +19,48 @@ const Login = () => {
     event.preventDefault()
   }
   return (
-    <div>
+    <div className='add-page'>
       <Navigation2/>
-    <div className='project-form'>
-      <form onSubmit={stop}>
-        <h1>Add a New Project</h1>
-        <div className='login-form-inputs'>
-          <Row>
-            <Col>
-              <TextField id="outlined-basic" label="Title" variant="outlined" onChange={(e) => setName(e.target.value)} required/>
-            </Col>
-            <Col>
-              <TextField id="outlined-basic" label="Description" variant="outlined" onChange={(e) => setDescription(e.target.value)} required/>
-            </Col>
-          </Row>
-          <br></br>
-          <Row>
-            <Col>
-              <TextField id="outlined-basic" label="Languages" variant="outlined" onChange={(e) => setLanguages(e.target.value)} required/>
-            </Col>
-            <Col>
-              <TextField id="outlined-basic" label="Website Link" variant="outlined" onChange={(e) => setLink(e.target.value)}/>
-            </Col>
-          </Row>
-          <br></br>
-          <Row>
-            <Col>
-              <TextField id="outlined-basic" label="GitHub Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)} required/>
-            </Col>
-            <Col>
-              <TextField id="outlined-basic" label="Image" variant="outlined" onChange={(e) => setImage(e.target.value)} required/>
-            </Col>
-          </Row>
-          <br></br>
-          <Row>
-            <Col>
-              <Button variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
-            </Col>
-          </Row>
-        </div>
-      </form>
-    </div>    
-    </div>
+      <div className='project-form'>
+        <form onSubmit={stop}>
+          <h1>Add a New Project</h1>
+          <div className='login-form-inputs'>
+            <Row>
+              <Col>
+                <TextField id="outlined-basic" label="Title" variant="outlined" onChange={(e) => setName(e.target.value)} required/>
+              </Col>
+              <Col>
+                <TextField id="outlined-basic" label="Description" variant="outlined" onChange={(e) => setDescription(e.target.value)} required/>
+              </Col>
+            </Row>
+            <br></br>
+            <Row>
+              <Col>
+                <TextField id="outlined-basic" label="Languages" variant="outlined" onChange={(e) => setLanguages(e.target.value)} required/>
+              </Col>
+              <Col>
+                <TextField id="outlined-basic" label="Website Link" variant="outlined" onChange={(e) => setLink(e.target.value)}/>
+              </Col>
+            </Row>
+            <br></br>
+            <Row>
+              <Col>
+                <TextField id="outlined-basic" label="GitHub Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)} required/>
+              </Col>
+              <Col>
+                <TextField id="outlined-basic" label="Image" variant="outlined" onChange={(e) => setImage(e.target.value)} required/>
+              </Col>
+            </Row>
+            <br></br>
+            <Row>
+              <Col>
+                <Button variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
+              </Col>
+            </Row>
+          </div>
+        </form>
+        </div>    
+      </div>
   )
 }
 

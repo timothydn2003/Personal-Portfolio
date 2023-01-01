@@ -6,12 +6,13 @@ html{
   background-color: #DBE2E8;
 }
 .landing-page{
-  margin-top: 25vh;
+  margin-top: 20vh;
   text-align: center;
   
 }
 .landing-page h1{
   font-size: 65px;
+  line-height: 65px;
 }
 .landing-page p{
   font-size: 25px;
@@ -32,14 +33,17 @@ h2{
 #projects-page{
   height: 100vh;
 }
+.add-page{
+  background-color: #DBE2E8;
+}
 .project-form{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 50%;
+  width: 40%;
   height: 40%;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  margin-top: 20vh;
+  margin-top: 10vh;
   border: 2px solid grey;
 }
 .project-form h1{
@@ -52,4 +56,15 @@ h2{
 .footer-btn{
   border: none;
   background-color: transparent;
+}
+.resume-btn{
+  width: 100px;
+  border: 3px solid black;
+  background-color: transparent;
+  padding: .3rem;
+  border-radius: 20px;
+  transition: .5s;
+}
+.resume-btn:hover{
+  background-color: white;
 }

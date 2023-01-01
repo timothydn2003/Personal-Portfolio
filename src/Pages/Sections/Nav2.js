@@ -7,7 +7,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 const Navigation2 = (props) => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" className='navbar-home'>
       <Container>
         <LinkContainer to= '/'>
             <Navbar.Brand><h2>Timothy Doan</h2></Navbar.Brand>
@@ -18,9 +18,9 @@ const Navigation2 = (props) => {
           </Nav>
           <Nav>
             <LinkContainer to = '/addProject'>
-              <Nav.Link>Add Projects</Nav.Link>
+              <Nav.Link>add projects</Nav.Link>
             </LinkContainer>
-            <button className='logout-btn' onClick={props.logout}><Nav.Link href="/">Logout</Nav.Link></button>
+            <button className='logout-btn' onClick={props.logout}><Nav.Link href="/">logout</Nav.Link></button>
           </Nav>
         </Navbar.Collapse>
       </Container>

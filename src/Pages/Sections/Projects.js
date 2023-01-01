@@ -9,6 +9,9 @@ function Projects() {
         <Row>
           <h2>my projects</h2>
         </Row>
+        <div className='projects-row'>
+
+        </div>
       </Container>
       
     </div>
