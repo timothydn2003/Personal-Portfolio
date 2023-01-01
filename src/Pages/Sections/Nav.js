@@ -7,17 +7,17 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 function Navigation() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg"className='navbar-home'>
       <Container>
-        <LinkContainer to={'/'}><Navbar.Brand>Timothy Doan</Navbar.Brand></LinkContainer>
+        <LinkContainer to= '/'><Navbar.Brand><h2>Timothy Doan</h2></Navbar.Brand></LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#projects-page">Projects</Nav.Link>
+            <Nav.Link href="#projects-page">projects</Nav.Link>
             <Nav.Link eventKey={2} href="#contact-page">
-              Contact
+              contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

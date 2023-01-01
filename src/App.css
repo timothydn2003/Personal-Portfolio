@@ -1,10 +1,23 @@
-.App {
-  text-align: center;
+html{
+  background-color: #DBE2E8;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#landing-page{
+  height: 100vh;
+  background-color: #DBE2E8;
+}
+.landing-page{
+  margin-top: 25vh;
+  text-align: center;
+  
+}
+.landing-page h1{
+  font-size: 65px;
+}
+.landing-page p{
+  font-size: 25px;
+}
+.navbar-home{
+  background-color: #DBE2E8;
 }
 .login-form{
   padding: 1rem;
@@ -12,8 +25,9 @@
 .username-input, .password-input{
   margin-bottom: 20px;
 }
-#landing-page{
-  height: 100vh;
+h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
 }
 #projects-page{
   height: 100vh;
@@ -35,4 +49,7 @@
   background-color: transparent;
   border: none;
 }
-
+.footer-btn{
+  border: none;
+  background-color: transparent;
+}

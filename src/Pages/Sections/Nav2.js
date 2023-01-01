@@ -7,10 +7,10 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 const Navigation2 = (props) => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
         <LinkContainer to= '/'>
-            <Navbar.Brand>Timothy Doan</Navbar.Brand>
+            <Navbar.Brand><h2>Timothy Doan</h2></Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

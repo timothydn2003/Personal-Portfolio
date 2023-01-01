@@ -14,7 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
 import '../../App.css'
 import { AppContext } from '../Home'
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const style = {
     position: 'absolute',
@@ -49,7 +49,8 @@ const Footer = (props) => {
   }
 return (
   <div>
-  <button onClick={handleOpen}><footer>@Timothy Doan 2022</footer></button>
+    <Container>
+  <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2022</button></footer>
   <Modal
   open={open}
   onClose={handleClose}
@@ -91,6 +92,7 @@ return (
       </form>
   </Box>
 </Modal>
+</Container>
   </div>
 )
 }
