@@ -7,11 +7,7 @@ import { Document, Page } from 'react-pdf';
 import { useState } from 'react';
 import resume from '../Images/resume.png'
 const Resume = () => {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-      }
+    
     return(
         <div className="resume-page">
             <div className="resume-nav">
@@ -35,7 +31,7 @@ const Resume = () => {
             </div>
             <Container >
               <div className='resume-main'>
-                <img src={resume} style = {{width: '50%', height: '70%'}}/>
+                <img src={resume}/>
               </div>
             </Container>
 
