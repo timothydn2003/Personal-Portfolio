@@ -4,17 +4,10 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import { useState, useContext } from 'react'
 import { TextField } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
-import FilledInput from '@mui/material/FilledInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import FormControl from '@mui/material/FormControl';
-import Input from '@mui/material/Input';
 import '../../App.css'
 import { AppContext } from '../Home'
 import { Col, Container, Row } from 'react-bootstrap';
+
 
 const style = {
     position: 'absolute',
@@ -29,15 +22,11 @@ const style = {
   };
 
 const Footer = (props) => {
-  const{setUsername, setPassword} = useContext(AppContext)
+  const{setUsername, setPassword, incorrectLogin} = useContext(AppContext)
 
   const [open, setOpen] = useState(false);
-  const [showPassword, setShowPassword] = React.useState(false);
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleMouseDownPassword = (event) => {
-      event.preventDefault();
-  };
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -50,49 +39,31 @@ const Footer = (props) => {
 return (
   <div>
     <Container>
-  <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2022</button></footer>
-  <Modal
-  open={open}
-  onClose={handleClose}
-  aria-labelledby="parent-modal-title"
-  aria-describedby="parent-modal-description"
->
-  <Box sx={{ ...style, width: 300 }}>
-      <form className='login-form' onSubmit={stop}>
-          <Row className='username-input'>
-            <Col>
-              <TextField id="filled-basic" label="Username" variant="filled" onChange={(e) => setUsername(e.target.value)} required/>
-            </Col>
-          </Row>
-          <Row className='password-input'>
-            <Col>
-            <FormControl sx={{ width: '19ch' }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
-              <FilledInput
-              onChange={(e) => setPassword(e.target.value)}
-              id="filled-adornment-password"
-              type={showPassword ? 'text' : 'password'}
-              endAdornment={
-                  <InputAdornment position="end">
-                  <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                  >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                  </InputAdornment>
-              }
-              required/>
-            </FormControl>
-            </Col>
-          </Row>
-          <Button type='submit' onClick={props.log} variant="outlined">Login</Button>
-      </form>
-  </Box>
-</Modal>
-</Container>
+      <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2022</button></footer>
+      <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="parent-modal-title"
+      aria-describedby="parent-modal-description"
+    >
+      <Box sx={{ ...style, width: 300 }}>
+          <form className='login-form' onSubmit={stop}>
+              <Row className='username-input'>
+                <Col>
+                  <TextField id="filled-basic" label="Username" variant="filled" onChange={(e) => setUsername(e.target.value)} required/>
+                </Col>
+              </Row>
+              <Row className='password-input'>
+                <Col>
+                <TextField id="filled-basic" label="Password" variant="filled" onChange={(e) => setPassword(e.target.value)} required/>
+                </Col>
+              </Row>
+              {incorrectLogin?"":<h6 className='error-message'>*Username or Password Incorrect*</h6>}
+              <Button type='submit' onClick={props.log} variant="outlined">Login</Button>
+          </form>
+      </Box>
+    </Modal>
+  </Container>
   </div>
 )
 }
