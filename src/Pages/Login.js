@@ -53,6 +53,9 @@ const Login = () => {
             </Row>
             <br></br>
             <Row>
+            <Col>
+                <TextField id="outlined-basic" label="Video Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)}/>
+              </Col>
               <Col>
                 <Button variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
               </Col>

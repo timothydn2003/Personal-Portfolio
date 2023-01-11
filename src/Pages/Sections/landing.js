@@ -11,13 +11,13 @@ function Landing() {
     <div className='landing-page'>
       <Container>
         <h1>Hello, I'm<br></br></h1>
-        <Typewriter onInit={(typewriter) => {
-          typewriter
-
-          .typeString("Timothy Doan.")
-          .pauseFor(2000)
-          .start()
-        }}
+        <Typewriter options={{
+          strings:['Timothy Doan.'],
+          autoStart:true,
+          loop:true,
+          pauseFor: 2500,
+          deleteSpeed: 100,
+                }}
         className = 'landing-name'
         />
         <hr style={{width: '25%', color: 'black', marginLeft:'auto', marginRight:'auto',borderTop:'4px solid'}}/>
