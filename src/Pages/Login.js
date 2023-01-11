@@ -6,15 +6,23 @@ import '../App.css'
 import { Col, Row } from 'react-bootstrap'
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import Button from '@mui/material/Button';
+import { db } from '../firebase-config'
+import { collection, addDoc } from 'firebase/firestore'
 
 const Login = () => {
+  const projectsCollectionRef = collection(db, "Projects")
+
   const[name,setName] = useState('')
   const[description,setDescription] = useState('')
   const[languages,setLanguages] = useState('')
   const[gitLink,setGitLink] = useState('')
   const[link,setLink] = useState('')
   const[image,setImage] = useState('')
+  const[videoLink, setVideoLink] = useState('')
 
+  const addProject = async () => {
+    await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, image, image: image, videoLink: videoLink})
+  }
   const stop = (event) => {
     event.preventDefault()
   }
@@ -54,10 +62,10 @@ const Login = () => {
             <br></br>
             <Row>
             <Col>
-                <TextField id="outlined-basic" label="Video Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)}/>
+                <TextField id="outlined-basic" label="Video Link" variant="outlined" onChange={(e) => setVideoLink(e.target.value)}/>
               </Col>
               <Col>
-                <Button variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
+                <Button onClick={addProject} variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
               </Col>
             </Row>
           </div>
