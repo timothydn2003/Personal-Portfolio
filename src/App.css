@@ -20,7 +20,7 @@ html{
   line-height: 30px;
 }
 .landing-page p{
-  font-size: 23px;
+  font-size: 20px;
   color: #738490;
 }
 .navbar-home{
@@ -54,6 +54,9 @@ h2{
 }
 .project-form h1{
   font-size: 30px;
+}
+.projects-row{
+  margin-top: 4vh;
 }
 .logout-btn{
   background-color: transparent;

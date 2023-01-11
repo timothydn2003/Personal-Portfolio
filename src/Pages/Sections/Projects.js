@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import '../../App.css'
 import { useState, useEffect } from 'react'
 import { db } from '../../firebase-config'
@@ -21,11 +21,23 @@ function Projects() {
           <h2>my projects</h2>
         </Row>
         <div className='projects-row'>
+        <Container>
           {projects.map((data) => {
             return(
-              <h1>{data.name}</h1>
+              <Row>
+                <Col>
+                 <div>
+                  <h1>{data.name}</h1>
+                 </div>
+                </Col>
+                <Col>
+                  <h1>{data.description}</h1>
+                </Col>
+              </Row>
+
             )
           })}
+          </Container>
         </div>
       </Container>
       
