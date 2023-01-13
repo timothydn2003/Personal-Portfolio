@@ -22,6 +22,7 @@ const Login = () => {
 
   const addProject = async () => {
     await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, image, image: image, videoLink: videoLink})
+
   }
   const stop = (event) => {
     event.preventDefault()
