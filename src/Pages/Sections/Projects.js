@@ -25,16 +25,17 @@ function Projects() {
           {projects.map((data) => {
             return(
               <Row>
-                <Col>
-                 <div>
+                <div>
+                <Col md = "6" xs = "12">
+                 <div className='project-box'>
                   <h1>{data.name}</h1>
                  </div>
                 </Col>
-                <Col>
+                <Col md = "6" xs = "12">
                   <h1>{data.description}</h1>
                 </Col>
+                </div>
               </Row>
-
             )
           })}
           </Container>

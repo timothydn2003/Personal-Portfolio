@@ -38,6 +38,7 @@ h2{
 }
 #projects-page{
   height: 100vh;
+  background-color: #E8ECF0;
 }
 .add-page{
   background-color: #DBE2E8;
@@ -57,6 +58,20 @@ h2{
 }
 .projects-row{
   margin-top: 4vh;
+}
+.project-box{
+  max-width: 480px;
+  min-height:270px;
+  position: relative;
+  margin: 6% auto;
+  background: #E8ECF0;
+  padding: 5px;
+  box-shadow:0 5px 20px #738490;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-box:hover{
+  box-shadow:0 5px 20px #2C5E76;
 }
 .logout-btn{
   background-color: transparent;
