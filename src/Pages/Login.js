@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material'
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Navigation2 from './Sections/Nav2'
 import '../App.css'
 import { Col, Row } from 'react-bootstrap'
@@ -9,12 +9,27 @@ import Button from '@mui/material/Button';
 import { db } from '../firebase-config'
 import { collection, addDoc } from 'firebase/firestore'
 import { storage } from '../firebase-config'
-import { ref, uploadBytes } from 'firebase/storage'
+import { ref, uploadBytes, listAll, getDownloadURL } from 'firebase/storage'
 import { v4 } from 'uuid'
+import Modal from '@mui/material/Modal' 
+import Box from '@mui/material/Box';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  overflow: 'scroll'
+};
 
 const Login = () => {
   const projectsCollectionRef = collection(db, "Projects")
-
+  //database link
   const[name,setName] = useState('')
   const[description,setDescription] = useState('')
   const[languages,setLanguages] = useState('')
@@ -23,23 +38,43 @@ const Login = () => {
   const[image,setImage] = useState(null)
   const[imageLink, setImageLink] = useState('')
   const[videoLink, setVideoLink] = useState('')
+  //Project details
+  const[imageList,setImageList] = useState([])
+  //List of image links
+  const [open, setOpen] = useState(false);
 
   const addProject = async () => {
-    
     await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, videoLink: videoLink, imageLink : imageLink})
-   
   }
 
+ 
   const addImage = () => {
     if(image === null) return;
-    const imageRef = ref(storage, `images/${image.name + v4()}`)
+    const imageRef = ref(storage, `images/${image.name}`)
     uploadBytes(imageRef, image).then(() => {
       alert("Project Uploaded")
     })
   }
+  const listRef = ref(storage, 'images/')
+  useEffect(() => {
+    listAll(listRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImageList(prev => [...prev,url])
+        })
+      })
+    })
+    console.log(imageList)
+  },[])
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   const stop = (event) => {
     event.preventDefault()
-    
   }
   return (
     <div className='add-page'>
@@ -67,16 +102,16 @@ const Login = () => {
             </Row>
             <br></br>
             <Row>
-              <Col md ="6">
+              <Col>
                 <TextField id="outlined-basic" label="GitHub Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)} required/>
               </Col>
-              <Col md="6">
+              <Col>
               <TextField id="outlined-basic" label="Image Link" variant="outlined" onChange={(e) => setImageLink(e.target.value)} required/>
               </Col>
             </Row>
             <br></br>
             <Row>
-            <Col>
+              <Col>
                 <TextField id="outlined-basic" label="Video Link" variant="outlined" onChange={(e) => setVideoLink(e.target.value)}/>
               </Col>
               <Col>
@@ -90,13 +125,34 @@ const Login = () => {
           <form onSubmit={stop}>
             <div className='project-form'>
               <Row>
-                <Col>
+                <Col md = "6">
                   <input type={"file"} onChange = {(e)=> setImage(e.target.files[0])} required/>
                 </Col>
-                <Col>
+                <Col md = "6">
                   <Button onClick={addImage} variant='outlined' type='submit'>Add Image<AddCircleOutlinedIcon/></Button>
                 </Col>
               </Row>
+              <Row>
+                <Col>
+                  <Button onClick={handleOpen} variant = 'outlined' type='submit'>Get Link</Button>
+                </Col>
+              </Row>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="parent-modal-title"
+                aria-describedby="parent-modal-description"
+              >
+                <Box sx={{ ...style, width: 600 }}>
+                    {imageList.map((data) => {
+                      return(
+                       <div>
+                         <h8 className = 'image-link'>{data}</h8><br></br>
+                       </div>
+                      )
+                    })}
+                </Box>
+              </Modal>
             </div>
           </form>
         </div>

@@ -5,7 +5,6 @@ import "../App.css"
 
 const ParticlesBackground = () => {
     const particlesInit = useCallback(async engine => {
-        console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
@@ -45,7 +44,7 @@ const ParticlesBackground = () => {
                             quantity: 2,
                         },
                         repulse: {
-                            distance: 200,
+                            distance: 300,
                             duration: 0.5,
                         },
                     },
@@ -56,16 +55,16 @@ const ParticlesBackground = () => {
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 150,
+                        distance: 140,
                         enable: true,
                         opacity: 1,
-                        width: 2,
+                        width: 2.5,
                     },
                     collisions: {
                         enable: true,
                     },
                     move: {
-                        directions: "none",
+                        direction: "none",
                         enable: true,
                         outModes: {
                             default: "bounce",
@@ -88,7 +87,7 @@ const ParticlesBackground = () => {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 1, max: 6 },
                     },
                 },
                 detectRetina: true,

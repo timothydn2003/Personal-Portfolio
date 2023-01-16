@@ -6,6 +6,7 @@ import { db } from '../../firebase-config'
 import { collection, getDocs } from 'firebase/firestore'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
+import { Fade } from 'react-reveal'
 
 function Projects() {
   const[projects,setProjects] = useState([])
@@ -27,13 +28,14 @@ function Projects() {
         <Container>
           {projects.map((data) => {
             return(
+              <Fade bottom>
               <Row>
                 <Col md = "6" xs = "12">
                  <div className='project-box'>
                   <div className='project-info'>
                     <Row>
                         <Col className='buttons'>
-                          <a href= {data.link != null? data.link: data.videLink} target = "_blank"><button className='button-icon'><LanguageIcon/></button></a>
+                          {data.link!="" || data.videoLink != ""?<a href= {data.link != null? data.link: data.videLink} target = "_blank"><button className='button-icon'><LanguageIcon/></button></a>:""}
                           <a href = {data.gitLink} target = "_blank"><button className='button-icon'><GitHubIcon/></button></a>
                         </Col>
                     </Row>
@@ -59,6 +61,7 @@ function Projects() {
                   <img className='project-image' src={data.imageLink}/>
                 </Col>
               </Row>
+              </Fade>
             )
           })}
           </Container>

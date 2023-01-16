@@ -28,7 +28,7 @@ html{
 }
 .landing-page p{
   font-size: 20px;
-  color: #738490;
+  color: #687883;
 }
 .navbar-home{
   background-color: transparent;
@@ -67,7 +67,7 @@ h2{
   margin-top: 4vh;
 }
 .project-box{
-  max-width: 480px;
+  max-width: 450px;
   min-height:240px;
   position: relative;
   margin: 6% auto;
@@ -103,25 +103,26 @@ h2{
   margin-top: 10px;
 }
 .project-image{
-  max-width: 480px; 
+  max-width: 450px; 
   min-height:240px;
   position: relative;
-  margin: 6% auto;
+  margin: 7% auto;
   box-shadow: 0 5px 20px #738490;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   transition: .3s;
 }
+.project-image:hover{
+  box-shadow:0 5px 20px #2C5E76;
+  transform: scale(.9);
+}
 .resume-img{
   text-align: center;
   width: 50%;
   height: auto;
 }
-.project-image:hover{
-  box-shadow:0 5px 20px #2C5E76;
-  transform: scale(.9);
-}
+
 .logout-btn{
   background-color: transparent;
   border: none;
@@ -165,6 +166,9 @@ h2{
 .particles{
   position: absolute !important;
   z-index: -1;
+}
+.image-link{
+  font-size: 10px;
 }
 @media only screen and (max-width:1200px){
   img{
