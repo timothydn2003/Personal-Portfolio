@@ -39,7 +39,7 @@ const Login = () => {
   const[imageLink, setImageLink] = useState('')
   const[videoLink, setVideoLink] = useState('')
   //Project details
-  const[imageList,setImageList] = useState([])
+  const[imageList,setImageList] = useState('')
   //List of image links
   const [open, setOpen] = useState(false);
 
@@ -51,21 +51,14 @@ const Login = () => {
   const addImage = () => {
     if(image === null) return;
     const imageRef = ref(storage, `images/${image.name}`)
-    uploadBytes(imageRef, image).then(() => {
-      alert("Project Uploaded")
+    uploadBytes(imageRef, image).then((snapshot) => {
+      getDownloadURL(snapshot.ref).then((url) => {
+        setImageList(url)
+      })
+      alert("Image Uploaded")
     })
   }
   const listRef = ref(storage, 'images/')
-  useEffect(() => {
-    listAll(listRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageList(prev => [...prev,url])
-        })
-      })
-    })
-    console.log(imageList)
-  },[])
 
   const handleOpen = () => {
     setOpen(true);
@@ -144,13 +137,7 @@ const Login = () => {
                 aria-describedby="parent-modal-description"
               >
                 <Box sx={{ ...style, width: 600 }}>
-                    {imageList.map((data) => {
-                      return(
-                       <div>
-                         <h8 className = 'image-link'>{data}</h8><br></br>
-                       </div>
-                      )
-                    })}
+                    <h8>{imageList}</h8>
                 </Box>
               </Modal>
             </div>

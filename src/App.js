@@ -4,12 +4,9 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 import Login from './Pages/Login';
 import { useState } from 'react'
 import Resume from './Pages/Resume';
-import ParticlesBackground from './Particles/ParticlesBackground';
 
 function App() {
   const[login,setLogin] = useState(false);
-  
-  
   return (
     <div className="App">
       <Router>
