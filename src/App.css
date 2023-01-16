@@ -1,9 +1,16 @@
 html{
   background-color: #cdd8e1;
 }
+.home-page{
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
 #landing-page{
   height: 100vh;
-  background-color: #cdd8e1;
+  background-color: transparent;
 }
 .landing-page{
   margin-top: 25vh;
@@ -24,7 +31,7 @@ html{
   color: #738490;
 }
 .navbar-home{
-  background-color: #cdd8e1;
+  background-color: transparent;
 }
 .login-form{
   padding: 1rem;
@@ -38,7 +45,7 @@ h2{
 }
 #projects-page{
   min-height: 140vh;
-  background-color: #E8ECF0;
+  background-color: transparent;
 }
 .add-page{
   background-color: #cdd8e1;
@@ -150,6 +157,10 @@ h2{
 }
 .file-btn{
   background-color: transparent;
+}
+.particles{
+  position: absolute !important;
+  z-index: 0;
 }
 @media only screen and (max-width:1200px){
   img{

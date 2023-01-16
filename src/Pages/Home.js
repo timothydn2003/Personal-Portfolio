@@ -10,6 +10,7 @@ import Navigation2 from './Sections/Nav2';
 import { auth } from "../firebase-config"
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import ParticlesBackground from '../Particles/ParticlesBackground';
 
 export const AppContext = createContext();
 const Home = (props) => {
@@ -35,6 +36,7 @@ const Home = (props) => {
     setIncorrectLogin(true)
   }
   return (
+    <div>
     <div className='home-page'>
         <AppContext.Provider value={{setUsername, setPassword, incorrectLogin}}>
           <section id='landing-page'>
@@ -48,6 +50,8 @@ const Home = (props) => {
             <Footer log = {log}/>
           </section>
         </AppContext.Provider>
+        </div>
+        <ParticlesBackground/>
     </div>
   )
 }
