@@ -36,7 +36,7 @@ const Home = (props) => {
     setIncorrectLogin(true)
   }
   return (
-    <div>
+
     <div className='home-page'>
         <AppContext.Provider value={{setUsername, setPassword, incorrectLogin}}>
           <section id='landing-page'>
@@ -50,9 +50,9 @@ const Home = (props) => {
             <Footer log = {log}/>
           </section>
         </AppContext.Provider>
-        </div>
         <ParticlesBackground/>
-    </div>
+        </div>
+        
   )
 }
 

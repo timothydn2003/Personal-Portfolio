@@ -6,10 +6,12 @@ import '../App.css'
 import { Document, Page } from 'react-pdf';
 import { useState } from 'react';
 import resume from '../Images/resume.png'
+import ParticlesBackground from '../Particles/ParticlesBackground';
 const Resume = () => {
     
     return(
         <div className="resume-page">
+        <ParticlesBackground/>
             <div className="resume-nav">
                 <Navbar collapseOnSelect expand="lg" className='navbar-home'>
                     <Container>
@@ -34,7 +36,7 @@ const Resume = () => {
                 <img className='resume-img' src={resume}/>
               </div>
             </Container>
-
+            
         </div>
     )
 }

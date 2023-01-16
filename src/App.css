@@ -142,7 +142,11 @@ h2{
   background-color: white;
 }
 .resume-page{
-  background-color: #cdd8e1;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 .resume-main{
   text-align: center;
@@ -160,7 +164,7 @@ h2{
 }
 .particles{
   position: absolute !important;
-  z-index: 0;
+  z-index: -1;
 }
 @media only screen and (max-width:1200px){
   img{

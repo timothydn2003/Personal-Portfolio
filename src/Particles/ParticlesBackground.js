@@ -17,6 +17,7 @@ const ParticlesBackground = () => {
     }, []);
     return(
         <Particles 
+        className="particles"
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
@@ -41,11 +42,11 @@ const ParticlesBackground = () => {
                     },
                     modes: {
                         push: {
-                            quantity: 3,
+                            quantity: 2,
                         },
                         repulse: {
                             distance: 200,
-                            duration: 0.4,
+                            duration: 0.5,
                         },
                     },
                 },
