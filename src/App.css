@@ -1,9 +1,9 @@
 html{
-  background-color: #DBE2E8;
+  background-color: #cdd8e1;
 }
 #landing-page{
   height: 100vh;
-  background-color: #DBE2E8;
+  background-color: #cdd8e1;
 }
 .landing-page{
   margin-top: 25vh;
@@ -24,7 +24,7 @@ html{
   color: #738490;
 }
 .navbar-home{
-  background-color: #DBE2E8;
+  background-color: #cdd8e1;
 }
 .login-form{
   padding: 1rem;
@@ -37,11 +37,11 @@ h2{
   font-size: 20px;
 }
 #projects-page{
-  height: 100vh;
+  min-height: 140vh;
   background-color: #E8ECF0;
 }
 .add-page{
-  background-color: #DBE2E8;
+  background-color: #cdd8e1;
 }
 .project-form{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -61,7 +61,7 @@ h2{
 }
 .project-box{
   max-width: 480px;
-  min-height:270px;
+  min-height:240px;
   position: relative;
   margin: 6% auto;
   background: #E8ECF0;
@@ -70,8 +70,50 @@ h2{
   display: flex;
   flex-wrap: wrap;
 }
+.buttons{
+  justify-content: end;
+  text-align: end;
+}
 .project-box:hover{
   box-shadow:0 5px 20px #2C5E76;
+}
+.project-info{
+  padding: 1rem 1rem 0rem 1rem;
+}
+.project-description{
+  color: #738490 ;
+  font-size: 17px;
+}
+.project-languages{
+  color: black;
+  font-size: 13px;
+  display: inline-block;
+}
+.project-name{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+  font-size: 23px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+.project-image{
+  max-width: 480px; 
+  min-height:240px;
+  position: relative;
+  margin: 6% auto;
+  box-shadow: 0 5px 20px #738490;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: .3s;
+}
+.resume-img{
+  text-align: center;
+  width: 50%;
+  height: auto;
+}
+.project-image:hover{
+  box-shadow:0 5px 20px #2C5E76;
+  transform: scale(.9);
 }
 .logout-btn{
   background-color: transparent;
@@ -93,19 +135,21 @@ h2{
   background-color: white;
 }
 .resume-page{
-  background-color: #DBE2E8;
+  background-color: #cdd8e1;
 }
 .resume-main{
   text-align: center;
 }
-img{
-  text-align: center;
-  width: 50%;
-  height: auto;
-}
 .error-message{
   color: red;
   font-size: 10px;
+}
+.button-icon{
+  border: none;
+  background-color: transparent;
+}
+.file-btn{
+  background-color: transparent;
 }
 @media only screen and (max-width:1200px){
   img{

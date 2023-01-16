@@ -8,6 +8,9 @@ import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import Button from '@mui/material/Button';
 import { db } from '../firebase-config'
 import { collection, addDoc } from 'firebase/firestore'
+import { storage } from '../firebase-config'
+import { ref, uploadBytes } from 'firebase/storage'
+import { v4 } from 'uuid'
 
 const Login = () => {
   const projectsCollectionRef = collection(db, "Projects")
@@ -17,15 +20,26 @@ const Login = () => {
   const[languages,setLanguages] = useState('')
   const[gitLink,setGitLink] = useState('')
   const[link,setLink] = useState('')
-  const[image,setImage] = useState('')
+  const[image,setImage] = useState(null)
+  const[imageLink, setImageLink] = useState('')
   const[videoLink, setVideoLink] = useState('')
 
   const addProject = async () => {
-    await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, image, image: image, videoLink: videoLink})
+    
+    await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, videoLink: videoLink, imageLink : imageLink})
+   
+  }
 
+  const addImage = () => {
+    if(image === null) return;
+    const imageRef = ref(storage, `images/${image.name + v4()}`)
+    uploadBytes(imageRef, image).then(() => {
+      alert("Project Uploaded")
+    })
   }
   const stop = (event) => {
     event.preventDefault()
+    
   }
   return (
     <div className='add-page'>
@@ -53,11 +67,11 @@ const Login = () => {
             </Row>
             <br></br>
             <Row>
-              <Col>
+              <Col md ="6">
                 <TextField id="outlined-basic" label="GitHub Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)} required/>
               </Col>
-              <Col>
-                <TextField id="outlined-basic" label="Image" variant="outlined" onChange={(e) => setImage(e.target.value)} required/>
+              <Col md="6">
+              <TextField id="outlined-basic" label="Image Link" variant="outlined" onChange={(e) => setImageLink(e.target.value)} required/>
               </Col>
             </Row>
             <br></br>
@@ -72,6 +86,20 @@ const Login = () => {
           </div>
         </form>
         </div>    
+        <div className='image-form'>
+          <form onSubmit={stop}>
+            <div className='project-form'>
+              <Row>
+                <Col>
+                  <input type={"file"} onChange = {(e)=> setImage(e.target.files[0])} required/>
+                </Col>
+                <Col>
+                  <Button onClick={addImage} variant='outlined' type='submit'>Add Image<AddCircleOutlinedIcon/></Button>
+                </Col>
+              </Row>
+            </div>
+          </form>
+        </div>
       </div>
   )
 }

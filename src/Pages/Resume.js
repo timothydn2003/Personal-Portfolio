@@ -31,7 +31,7 @@ const Resume = () => {
             </div>
             <Container >
               <div className='resume-main'>
-                <img src={resume}/>
+                <img className='resume-img' src={resume}/>
               </div>
             </Container>
 
