@@ -180,12 +180,16 @@ h2{
 #contact-page{
   max-height: 100vh;
 }
-.contact-info{
-  margin-top: 0vh;
-  margin-bottom: 0vh;
+.contact-section{
+  min-height: 90vh;
 }
+.footer{
+  min-height: 8vh;
+}
+
 .col-md-9{
   text-align: right;
+  justify-content: flex-end;
 }
 .contact-message{
   text-align: center;
