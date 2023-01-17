@@ -3,7 +3,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import Navigation2 from './Sections/Nav2'
 import '../App.css'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import Button from '@mui/material/Button';
 import { db } from '../firebase-config'
@@ -82,13 +82,14 @@ const Login = () => {
                 <TextField id="outlined-basic" label="Title" variant="outlined" onChange={(e) => setName(e.target.value)} required/>
               </Col>
               <Col>
-                <TextField id="outlined-basic" label="Description" variant="outlined" onChange={(e) => setDescription(e.target.value)} required/>
+                
+              <TextField id="outlined-basic" label="Languages" variant="outlined" onChange={(e) => setLanguages(e.target.value)} required/>
               </Col>
             </Row>
             <br></br>
             <Row>
               <Col>
-                <TextField id="outlined-basic" label="Languages" variant="outlined" onChange={(e) => setLanguages(e.target.value)} required/>
+                <TextField id="outlined-basic" label="Video Link" variant="outlined" onChange={(e) => setVideoLink(e.target.value)}/>
               </Col>
               <Col>
                 <TextField id="outlined-basic" label="Website Link" variant="outlined" onChange={(e) => setLink(e.target.value)}/>
@@ -105,12 +106,17 @@ const Login = () => {
             </Row>
             <br></br>
             <Row>
-              <Col>
-                <TextField id="outlined-basic" label="Video Link" variant="outlined" onChange={(e) => setVideoLink(e.target.value)}/>
-              </Col>
-              <Col>
-                <Button onClick={addProject} variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
-              </Col>
+             <Container>
+              <TextField id="outlined-basic" label="Description" variant="outlined" multiline rows={4}maxRows={8} style = {{width: '100%'}} onChange={(e) => setDescription(e.target.value)} required/>
+             </Container>
+            </Row>
+            <br></br>
+            <Row>
+            <Col md = '6'>
+              <Button onClick={addProject} variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
+            </Col>
+            
+
             </Row>
           </div>
         </form>
