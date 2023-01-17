@@ -184,7 +184,7 @@ h2{
   min-height: 90vh;
 }
 .footer{
-  min-height: 8vh;
+  min-height: 6vh;
 }
 
 .col-md-9{
@@ -228,10 +228,6 @@ h2{
   }
   .resume-btn:hover{
     background-color: white;
-  }
-  .contact-info{
-    margin-top: 20vh;
-    margin-bottom: 30vh;
   }
   .landing-page h1{
     font-size: 75px;
@@ -305,7 +301,6 @@ h2{
   }
   .contact-info{
     margin-top: 13vh;
-    margin-bottom: 20vh;
   }
   .landing-page h1{
     font-size: 45px;
@@ -326,10 +321,6 @@ h2{
     margin-top: 10vh;
     width: 100%;
     height: auto
-  }
-  .contact-info{
-    margin-top: 13vh;
-    margin-bottom: 15vh;
   }
   .landing-page h1{
     font-size: 45px;
