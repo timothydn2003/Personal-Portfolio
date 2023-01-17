@@ -2,8 +2,9 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import {LinkContainer} from 'react-router-bootstrap'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Navigation() {
   return (
@@ -21,6 +22,7 @@ function Navigation() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
   )
