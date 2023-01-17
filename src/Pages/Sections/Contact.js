@@ -18,7 +18,6 @@ const Contact = () => {
     return(
        <div className="contact-section">
             <Container>
-                
                     <Row>
                         <Col>
                             <h2>contact</h2>
@@ -33,10 +32,10 @@ const Contact = () => {
                     <Row>
                         <div className="contact-email" data-aos="fade-up">
                             <form className="contact-form">
-                                <TextField style={{width: '50%', marginBottom: '10px'}} size="small" id="outlined-basic" label="Name" variant="outlined" type="text" onChange={(e) => setName(e.target.value)} required/><br></br>
-                                <TextField style={{width: '50%', marginBottom: '10px'}} size="small" id="outlined-basic" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)} required/><br></br>
-                                <TextField style={{width: '50%', marginBottom: '10px'}} size="small" id="outlined-basic" label="Subject" variant="outlined" onChange={(e) => setSubject(e.target.value)} required/><br></br>
-                                <TextField style={{width: '50%', marginBottom: '40px'}} id="outlined-basic" label="Subject" variant="outlined" multiline rows={8}maxRows={12} onChange={(e) => setSubject(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '10px', marginTop: '1vh', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Name" variant="outlined" type="text" onChange={(e) => setName(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Subject" variant="outlined" onChange={(e) => setSubject(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '40px', backgroundColor: "#E8ECF0" }} id="outlined-basic" label="Subject" variant="outlined" multiline rows={8}maxRows={12} onChange={(e) => setSubject(e.target.value)} required/><br></br>
                             </form>
                         </div>
                     </Row>
