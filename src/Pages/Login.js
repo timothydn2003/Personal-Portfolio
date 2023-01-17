@@ -44,6 +44,7 @@ const Login = () => {
   const [open, setOpen] = useState(false);
 
   const addProject = async () => {
+    if(name === '') return
     await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, videoLink: videoLink, imageLink : imageLink})
   }
 
@@ -127,7 +128,7 @@ const Login = () => {
               </Row>
               <Row>
                 <Col>
-                  <Button onClick={handleOpen} variant = 'outlined' type='submit'>Get Link</Button>
+                  <Button onClick={handleOpen} variant = 'outlined'>Get Link</Button>
                 </Col>
               </Row>
               <Modal

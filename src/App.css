@@ -70,9 +70,9 @@ h2{
   max-width: 450px;
   min-height:240px;
   position: relative;
-  margin: 6% auto;
+  margin: 7% auto;
   background: #E8ECF0;
-  padding: 5px;
+  padding: 3px;
   box-shadow:0 5px 20px #738490;
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +85,7 @@ h2{
   box-shadow:0 5px 20px #2C5E76;
 }
 .project-info{
-  padding: 1rem 1rem 0rem 1rem;
+  padding: .5rem .5rem 0rem 1rem;
 }
 .project-description{
   color: #738490 ;
@@ -115,7 +115,7 @@ h2{
 }
 .project-image:hover{
   box-shadow:0 5px 20px #2C5E76;
-  transform: scale(.9);
+  transform: scale(1.05);
 }
 .resume-img{
   text-align: center;
@@ -127,9 +127,16 @@ h2{
   background-color: transparent;
   border: none;
 }
+.footer{
+  position:relative;
+  margin-top: 20px;
+}
 .footer-btn{
   border: none;
   background-color: transparent;
+  padding: 0;
+  font-size:medium;
+  color: #687883 ;
 }
 .resume-btn{
   width: 100px;
@@ -170,6 +177,26 @@ h2{
 .image-link{
   font-size: 10px;
 }
+#contact-page{
+  height: 100vh;
+}
+.col-md-9{
+  text-align: right;
+}
+.contact-message{
+  text-align: center;
+  font-size: 20px;
+  color: #687883;
+  margin-top: 5%;
+}
+.contact-email{
+  justify-content: center;
+  text-align: center;
+}
+.contact-form{
+  text-align: center;
+}
+
 @media only screen and (max-width:1200px){
   img{
     width: 70%;

@@ -6,7 +6,10 @@ import { useState, useContext } from 'react'
 import { TextField } from '@mui/material';
 import '../../App.css'
 import { AppContext } from '../Home'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Nav, Row } from 'react-bootstrap';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 
 const style = {
@@ -37,9 +40,18 @@ const Footer = (props) => {
     event.preventDefault()
   }
 return (
-  <div>
+  <div className='footer'>
     <Container>
-      <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2022</button></footer>
+      <Row>
+        <Col md = '3' xs = '6'>
+          <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2022</button></footer>
+        </Col>
+        <Col md = '9' xs = '6'>
+          <a href='https://www.linkedin.com/in/timothy-doan-4703b3213/' target={"_blank"}><LinkedInIcon style={{ color: "black", fontSize: 35,  marginRight: '20px'}}/></a>
+          <a href='https://github.com/timothydn2003' target={"_blank"}><GitHubIcon style={{fontSize: 35, color: "black", marginRight: '20px'}}/></a>
+          <a href='#landing-page'><ArrowCircleUpIcon style={{fontSize: 35, color: "black"}}/></a> 
+        </Col>
+      </Row>
       <Modal
       open={open}
       onClose={handleClose}
