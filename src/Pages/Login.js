@@ -101,7 +101,7 @@ const Login = () => {
                 <TextField id="outlined-basic" label="GitHub Link" variant="outlined" onChange={(e) => setGitLink(e.target.value)} required/>
               </Col>
               <Col>
-              <TextField id="outlined-basic" label="Image Link" variant="outlined" onChange={(e) => setImageLink(e.target.value)} required/>
+              <TextField id="outlined-basic" label="Image Link" variant="outlined" onChange={(e) => setImageLink(e.target.value)} required value={imageList}/>
               </Col>
             </Row>
             <br></br>
