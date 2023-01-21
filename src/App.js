@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 import Login from './Pages/Login';
 import { useState } from 'react'
 import Resume from './Pages/Resume';
+import Thankyou from './Pages/Thankyou';
 
 function App() {
   const[login,setLogin] = useState(false);
@@ -14,6 +15,7 @@ function App() {
           <Route path={'/'} element = {<Home setLogin = {setLogin} login = {login}/>}/>
           <Route path={'/addProject'} element = {login?<Login/>:<Home/>}/>
           <Route path={'/resume'} element = {<Resume/>}/>
+          <Route path= {'/thankyou'} element = {<Thankyou/>}/>
           
         </Routes>
       </Router>

@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Button } from "react-bootstrap"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { TextField } from '@mui/material'
@@ -31,11 +31,13 @@ const Contact = () => {
                     </Row>
                     <Row>
                         <div className="contact-email" data-aos="fade-up">
-                            <form className="contact-form">
-                                <TextField style={{ width: '50%', marginBottom: '10px', marginTop: '1vh', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Name" variant="outlined" type="text" onChange={(e) => setName(e.target.value)} required/><br></br>
-                                <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)} required/><br></br>
-                                <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Subject" variant="outlined" onChange={(e) => setSubject(e.target.value)} required/><br></br>
-                                <TextField style={{ width: '50%', marginBottom: '40px', backgroundColor: "#E8ECF0" }} id="outlined-basic" label="Subject" variant="outlined" multiline rows={8}maxRows={12} onChange={(e) => setSubject(e.target.value)} required/><br></br>
+                            <form className="contact-form" action="https://formsubmit.co/timothy_doan@yahoo.com" method="POST">
+                                <TextField style={{ width: '50%', marginBottom: '10px', marginTop: '1vh', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Name" name = "name" variant="outlined" type="ema" onChange={(e) => setName(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Email" variant="outlined" name="email" type= "email" onChange={(e) => setEmail(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Subject" variant="outlined" name="subject" onChange={(e) => setSubject(e.target.value)} required/><br></br>
+                                <TextField style={{ width: '50%', marginBottom: '40px', backgroundColor: "#E8ECF0" }} id="outlined-basic" label="Subject" variant="outlined" name="message" multiline rows={8}maxRows={12} onChange={(e) => setSubject(e.target.value)} required/><br></br>
+                                <input type="hidden" name="_next" value="http://localhost:3000/thankyou"></input>
+                                <button type="submit" className="email-btn">Submit</button>
                             </form>
                         </div>
                     </Row>

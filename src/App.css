@@ -201,7 +201,27 @@ h2{
 .contact-form{
   text-align: center;
 }
-
+.email-btn{
+  background-color: #2C5E76;
+  color: white;
+  padding: .5rem;
+  border-radius: 30px;
+  width: 80px;
+  font-weight: 500;
+  border: 2px solid black;
+  transition: .3s;
+}
+.email-btn:hover{
+  background-color: #316D89;
+}
+.thankyou-page{
+  background-color: #cdd8e1;
+}
+.thankyou-message{
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 30px;
+}
 @media only screen and (max-width:1200px){
   img{
     width: 70%;
