@@ -36,7 +36,7 @@ const Contact = () => {
                                 <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Email" variant="outlined" name="email" type= "email" onChange={(e) => setEmail(e.target.value)} required/><br></br>
                                 <TextField style={{ width: '50%', marginBottom: '10px', backgroundColor: "#E8ECF0" }} size="small" id="outlined-basic" label="Subject" variant="outlined" name="subject" onChange={(e) => setSubject(e.target.value)} required/><br></br>
                                 <TextField style={{ width: '50%', marginBottom: '40px', backgroundColor: "#E8ECF0" }} id="outlined-basic" label="Subject" variant="outlined" name="message" multiline rows={8}maxRows={12} onChange={(e) => setSubject(e.target.value)} required/><br></br>
-                                <input type="hidden" name="_next" value="http://localhost:3000/thankyou"></input>
+                                <input type="hidden" name="_next" value="https://timdoan.netlify.app//thankyou"></input>
                                 <button type="submit" className="email-btn">Submit</button>
                             </form>
                         </div>
