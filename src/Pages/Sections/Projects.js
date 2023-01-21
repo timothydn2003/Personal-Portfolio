@@ -42,7 +42,7 @@ function Projects() {
                   <div className='project-info'>
                     <Row>
                         <Col className='buttons'>
-                          {data.link!== "" || data.videoLink !== ""?<a href= {data.link != null? data.link: data.videLink} target = "_blank"><button className='button-icon' ><LanguageIcon style={{ color: "black"}}/></button></a>:""}
+                          {data.link!== "" || data.videoLink !== ""?<a href= {data.link != null? data.link: data.videLink} target = "_blank"><button className='button-icon' ><LanguageIcon style={{ color: "black", marginLeft: "10px"}}/></button></a>:""}
                           <a href = {data.gitLink} target = "_blank"><button className='button-icon'><GitHubIcon style={{ color: "black"}}/></button></a>
                         </Col>
                     </Row>
