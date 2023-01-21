@@ -145,6 +145,7 @@ h2{
   padding: .3rem;
   border-radius: 20px;
   transition: .5s;
+  color: black;
 }
 .resume-btn:hover{
   background-color: white;
@@ -220,7 +221,7 @@ h2{
 .thankyou-message{
   text-align: center;
   margin-top: 5vh;
-  font-size: 30px;
+  
 }
 @media only screen and (max-width:1200px){
   img{
