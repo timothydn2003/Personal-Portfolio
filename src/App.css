@@ -227,34 +227,40 @@ h2{
   margin-top: 5vh;
 
 }
-.experience-content b{
+.experience-content1 b{
   font-size: 20px;
 }
-.experience-content h7{
+.experience-content1 h7{
   font-size: 2.3vh;
 }
-.about-content{
-  margin-top: 10vh;
+.experience-content2 b{
+  font-size: 2.4vh;
 }
-.about-content p{
-  border: 2px black solid;
-  border-radius: 3rem;
-  padding: 2rem;
-  background-color: #cdd8e1;
+.experience-content2 h8{
+  font-size: 2.3vh;
 }
+
 .experience-timeline{
     margin-top: 8vh;
 
 }
+.planet{
+  width: 512px;
+  height: 512px;
+}
+.experience-logo{
+  width: 10vh;
+  border-radius: 2rem;
+}
 @media only screen and (max-width:1200px){
-  img{
+  .resume-img{
     width: 70%;
     height: auto;
   }
 
 }
 @media only screen and (max-width:991px){
-  img{
+  .resume-img{
     width: 90%;
     height: auto;
   }
@@ -344,7 +350,14 @@ h2{
   }
 }
 @media only screen and (max-width:414px){
-  img{
+  .spline-object{
+    height: 40vh;
+  }
+  .experience-logo{
+    width: 3em !important;
+    height: 3em !important;
+  }
+  .resume.img{
     margin-top: 10vh;
     width: 100%;
     height: auto
@@ -365,9 +378,29 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
+  .planet{
+    width: 375px;
+    height: 375px;
+  }
+  /* .experience-content1 b{
+    font-size: 15px;
+  }
+  .experience-content1 h7{
+    font-size: 1.5vh;
+  }
+  .experience-timeline{
+      margin-top: 10vh;
+  }
+  .experience-content2 b{
+    font-size: 15px;
+  }
+  .experience-content2 h8{
+    font-size: 1.4vh; */
+  /* } */
+
 }
 @media only screen and (max-width:393px){
-  img{
+  .resume-img{
     margin-top: 10vh;
     width: 100%;
     height: auto
@@ -385,9 +418,10 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
+
 }
 @media only screen and (max-width:390px){
-  img{
+  .resume-img{
     margin-top: 10vh;
     width: 100%;
     height: auto
@@ -411,7 +445,7 @@ h2{
   }
 }
 @media only screen and (max-width:375px){
-  img{
+  .resume-img{
     margin-top: 10vh;
     width: 100%;
     height: auto

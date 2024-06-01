@@ -10,8 +10,7 @@ import hpeLogo from "../../../src/Images/hpe.png"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
-import Spline from '@splinetool/react-spline';
-import Planet from '../../Images/World';
+import TimelineDot from '@mui/lab/TimelineDot';
 
 const Experience = () => {
     useEffect(() => {
@@ -26,10 +25,9 @@ const Experience = () => {
                 </Row>
                 <Row>
                     <Col md = "6" xs = "12" className='spline-object'>
-                        <div data-aos="fade-up" style={{width:"512px", height:"512px"}}>
+                        <div className="planet" data-aos="fade-up">
                             <iframe src='https://my.spline.design/planetcopy-da5d7a5882cb643d2f12cfd2d93c574c/' width='100%' height='100%'></iframe>
                         </div>
-                        {/* <Planet/> */}
                     </Col>
                     <Col md = "6" xs = "12">
                     <div className='experience-timeline' data-aos="fade-up">
@@ -44,13 +42,15 @@ const Experience = () => {
                                 Jun 2024 - Present
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
-                                <TimelineConnector />
-                                <img src={hpeLogo} style={{width: '10vh', borderRadius: "2rem"}}/>
-                                <TimelineConnector />
+                                    <TimelineConnector />
+                                        <img className = "experience-logo" src={hpeLogo}/>
+                                    <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '25px', px: 2 }}>
-                                    <b style={{fontSize: "2.4vh"}}>Hewlett Packard Enterprise</b><br/>
-                                    <h7 style={{fontSize: "2.3vh"}}>Software Engineering Intern</h7>
+                                    <div className='experience-content2'>
+                                        <b>Hewlett Packard Enterprise</b><br/>
+                                        <h8>Software Engineering Intern</h8>
+                                    </div>
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem>
@@ -63,12 +63,12 @@ const Experience = () => {
                                 May 2022 - May 2023
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
-                                <TimelineConnector />
-                                <img src={smudLogo} style={{width: '10vh', borderRadius: "2rem"}}/>
-                                <TimelineConnector />
+                                    <TimelineConnector />
+                                        <img className = "experience-logo" src={smudLogo}/>
+                                    <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '25px', px: 2 }}>
-                                    <div className='experience-content'>
+                                    <div className='experience-content1'>
                                         <b>SMUD</b><br/>
                                         <h7>Enterprise App Admin Intern</h7>
                                     </div>
@@ -84,13 +84,15 @@ const Experience = () => {
                                 May 2023 - Oct 2023
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
-                                <TimelineConnector />
-                                <img src={hpeLogo} style={{width: '10vh', height:'auto',borderRadius: "10rem"}}/>
-                                <TimelineConnector />
+                                    <TimelineConnector />
+                                        <img className = "experience-logo" src={hpeLogo}/>
+                                    <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '25px', px: 2 }}>
-                                    <b style={{fontSize: "2.4vh"}}>Hewlett Packard Enterprise</b><br/>
-                                    <h8 style={{fontSize: "2.3vh"}}>Software Engineering Intern</h8>
+                                    <div className='experience-content2'>
+                                        <b>Hewlett Packard Enterprise</b><br/>
+                                        <h8>Software Engineering Intern</h8>
+                                    </div>
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem>
@@ -103,12 +105,12 @@ const Experience = () => {
                                 May 2022 - May 2023
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
-                                <TimelineConnector />
-                                <img src={smudLogo} style={{width: '10vh', borderRadius: "2rem"}}/>
-                                <TimelineConnector />
+                                    <TimelineConnector />
+                                        <img className = "experience-logo" src={smudLogo}/>
+                                    <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '25px', px: 2 }}>
-                                    <div className='experience-content'>
+                                    <div className='experience-content1'>
                                         <b>SMUD</b><br/>
                                         <h7>Technology & Innovation Intern</h7>
                                     </div>
