@@ -12,6 +12,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import ParticlesBackground from '../Particles/ParticlesBackground';
 import Contact from './Sections/Contact';
+import Experience from './Sections/Experience';
 
 export const AppContext = createContext();
 const Home = (props) => {
@@ -47,6 +48,9 @@ const Home = (props) => {
           <section id='projects-page'>
             <Projects/>
           </section>
+          <section id='experience-page'>
+            <Experience/>
+          </section>
           <section id='contact-page'>
             <Contact/>
             <Footer log = {log}/>
@@ -54,7 +58,7 @@ const Home = (props) => {
         </AppContext.Provider>
         <ParticlesBackground/>
         </div>
-        
+
   )
 }
 

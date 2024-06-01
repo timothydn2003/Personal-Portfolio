@@ -17,12 +17,15 @@ function Navigation() {
           </Nav>
           <Nav>
             <Nav.Link href="#projects-page">projects</Nav.Link>
+            <Nav.Link eventKey={2} href="#experience-page">
+              experience
+            </Nav.Link>
             <Nav.Link eventKey={2} href="#contact-page">
               contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        
+
       </Container>
     </Navbar>
   )
