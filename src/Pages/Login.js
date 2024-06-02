@@ -11,7 +11,7 @@ import { collection, addDoc } from 'firebase/firestore'
 import { storage } from '../firebase-config'
 import { ref, uploadBytes, listAll, getDownloadURL } from 'firebase/storage'
 import { v4 } from 'uuid'
-import Modal from '@mui/material/Modal' 
+import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box';
 
 const style = {
@@ -45,10 +45,10 @@ const Login = () => {
 
   const addProject = async () => {
     if(name === '') return
-    await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, videoLink: videoLink, imageLink : imageLink})
+    await addDoc(projectsCollectionRef, {name: name, description: description, languages: languages, gitLink: gitLink, link: link, videoLink: videoLink, imageLink : imageLink, date: new Date().toString()})
   }
 
- 
+
   const addImage = () => {
     if(image === null) return;
     const imageRef = ref(storage, `images/${image.name}`)
@@ -82,7 +82,7 @@ const Login = () => {
                 <TextField id="outlined-basic" label="Title" variant="outlined" onChange={(e) => setName(e.target.value)} required/>
               </Col>
               <Col>
-                
+
               <TextField id="outlined-basic" label="Languages" variant="outlined" onChange={(e) => setLanguages(e.target.value)} required/>
               </Col>
             </Row>
@@ -115,12 +115,12 @@ const Login = () => {
             <Col md = '6'>
               <Button onClick={addProject} variant='outlined' type='submit'>Add Project<AddCircleOutlinedIcon/></Button>
             </Col>
-            
+
 
             </Row>
           </div>
         </form>
-        </div>    
+        </div>
         <div className='image-form'>
           <form onSubmit={stop}>
             <div className='project-form'>

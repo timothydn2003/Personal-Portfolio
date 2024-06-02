@@ -252,6 +252,7 @@ h2{
   width: 10vh;
   border-radius: 2rem;
 }
+
 @media only screen and (max-width:1200px){
   .project-image{
     width: 70%;
@@ -382,21 +383,18 @@ h2{
     width: 375px;
     height: 375px;
   }
-  /* .experience-content1 b{
+  .experience-content1 b{
     font-size: 15px;
   }
   .experience-content1 h7{
     font-size: 1.5vh;
   }
-  .experience-timeline{
-      margin-top: 10vh;
-  }
   .experience-content2 b{
     font-size: 15px;
   }
   .experience-content2 h8{
-    font-size: 1.4vh; */
-  /* } */
+    font-size: 1.4vh;
+   }
 
 }
 @media only screen and (max-width:393px){
@@ -418,6 +416,22 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
+  .planet{
+    width: 375px;
+    height: 375px;
+  }
+  .experience-content1 b{
+    font-size: 15px;
+  }
+  .experience-content1 h7{
+    font-size: 1.5vh;
+  }
+  .experience-content2 b{
+    font-size: 15px;
+  }
+  .experience-content2 h8{
+    font-size: 1.4vh;
+   }
 
 }
 @media only screen and (max-width:390px){
@@ -443,6 +457,22 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
+  .planet{
+    width: 375px;
+    height: 375px;
+  }
+  .experience-content1 b{
+    font-size: 15px;
+  }
+  .experience-content1 h7{
+    font-size: 1.5vh;
+  }
+  .experience-content2 b{
+    font-size: 15px;
+  }
+  .experience-content2 h8{
+    font-size: 1.4vh;
+   }
 }
 @media only screen and (max-width:375px){
   .project-image{
@@ -467,6 +497,22 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
+  .planet{
+    width: 350px;
+    height: 375px;
+  }
+  .experience-content1 b{
+    font-size: 15px;
+  }
+  .experience-content1 h7{
+    font-size: 1.5vh;
+  }
+  .experience-content2 b{
+    font-size: 15px;
+  }
+  .experience-content2 h8{
+    font-size: 1.4vh;
+   }
 }
 @media only screen and (max-width:360px){
   .contact-info{
@@ -486,4 +532,20 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
+  .planet{
+    width: 350px;
+    height: 375px;
+  }
+  .experience-content1 b{
+    font-size: 15px;
+  }
+  .experience-content1 h7{
+    font-size: 1.5vh;
+  }
+  .experience-content2 b{
+    font-size: 15px;
+  }
+  .experience-content2 h8{
+    font-size: 1.4vh;
+   }
 }

@@ -10,7 +10,6 @@ import hpeLogo from "../../../src/Images/hpe.png"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
-import TimelineDot from '@mui/lab/TimelineDot';
 
 const Experience = () => {
     useEffect(() => {

@@ -15,7 +15,15 @@ function Projects() {
   useEffect(() => {
     const getProjects = async () => {
       const data = await getDocs(projectsCollectionRef)
-      setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+      const tmpArr = (data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+
+      tmpArr.sort((a, b) => {
+        const bDate = new Date(b.date);
+        const aDate = new Date(a.date);
+        return bDate - aDate;
+      });
+
+      setProjects(tmpArr)
     }
     getProjects()
 
@@ -24,7 +32,7 @@ function Projects() {
   },[])
   return (
     <div className='projects-section'>
-      <Container>    
+      <Container>
           <Row>
             <h2>my projects</h2>
           </Row>
@@ -42,7 +50,7 @@ function Projects() {
                   <div className='project-info'>
                     <Row>
                         <Col className='buttons'>
-                          {data.link!== "" || data.videoLink !== ""?<a href= {data.link != null? data.link: data.videLink} target = "_blank"><button className='button-icon' ><LanguageIcon style={{ color: "black", marginLeft: "10px"}}/></button></a>:""}
+                          {data.link!== "" || data.videoLink !== ""?<a href= {data.link != null? data.videoLink: data.link} target = "_blank"><button className='button-icon' ><LanguageIcon style={{ color: "black", marginLeft: "10px"}}/></button></a>:""}
                           <a href = {data.gitLink} target = "_blank"><button className='button-icon'><GitHubIcon style={{ color: "black"}}/></button></a>
                         </Col>
                     </Row>
@@ -64,7 +72,7 @@ function Projects() {
                   </div>
                  </div>
                 </Col>
-               
+
               </Row>
               </div>
             )
@@ -72,7 +80,7 @@ function Projects() {
           </Container>
         </div>
       </Container>
-      
+
     </div>
   )
 }
