@@ -38,7 +38,7 @@ const Experience = () => {
                                 variant="body2"
                                 color="text.secondary"
                                 >
-                                Jun 2024 - Present
+                                Jun 2024 - Aug 2024
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
                                     <TimelineConnector />

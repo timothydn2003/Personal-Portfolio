@@ -22,9 +22,7 @@ function Landing() {
         />
         <hr style={{width: '25%', color: 'black', marginLeft:'auto', marginRight:'auto',borderTop:'4px solid'}}/>
         <p>Currently a Computer Science student <br></br>at California State University, Sacramento</p>
-        <LinkContainer to='/resume'>
-          <button className='resume-btn'><b>Resume</b></button>
-        </LinkContainer>
+          <button className='resume-btn'><b><a className="a-resume-btn" target="_blank" href='https://drive.google.com/file/d/1tF7F3QYUXN6Y7ObInOWyWQT4aZLLF7px/view?usp=sharing'>Resume</a></b></button>
       </Container>
       
     </div>

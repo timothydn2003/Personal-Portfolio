@@ -1,6 +1,9 @@
 html{
   background-color: #cdd8e1;
 }
+body {
+  overflow-x: hidden;
+}
 .home-page{
   z-index: 999;
   position: absolute;
@@ -253,6 +256,14 @@ h2{
   border-radius: 2rem;
 }
 
+.a-resume-btn{
+  color: black;
+  text-decoration: none;
+}
+.a-resume-btn:hover{
+  color: black;
+}
+
 @media only screen and (max-width:1200px){
   .project-image{
     width: 70%;
@@ -350,6 +361,17 @@ h2{
     color: #1D539A;
   }
 }
+
+@media only screen and (max-width:430px){
+  body {
+    overflow-x: hidden;
+  }
+  .planet{
+    width: 410px;
+    height: 512px;
+  }
+}
+
 @media only screen and (max-width:414px){
   .spline-object{
     height: 40vh;
