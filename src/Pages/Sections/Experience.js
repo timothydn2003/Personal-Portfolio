@@ -38,6 +38,27 @@ const Experience = () => {
                                 variant="body2"
                                 color="text.secondary"
                                 >
+                                Feb 2025 - Present
+                                </TimelineOppositeContent>
+                                <TimelineSeparator>
+                                    <TimelineConnector />
+                                        <img className = "experience-logo" src={hpeLogo}/>
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent sx={{ py: '25px', px: 2 }}>
+                                    <div className='experience-content2'>
+                                        <b>Hewlett Packard Enterprise</b><br/>
+                                        <h8>Software Engineer</h8>
+                                    </div>
+                                </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                                <TimelineOppositeContent
+                                sx={{ m: 'auto 0' }}
+                                align="right"
+                                variant="body2"
+                                color="text.secondary"
+                                >
                                 Jun 2024 - Aug 2024
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>

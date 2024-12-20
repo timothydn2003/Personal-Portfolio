@@ -44,7 +44,7 @@ return (
     <Container>
       <Row>
         <Col md = '3' xs = '6'>
-          <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2022</button></footer>
+          <footer><button className='footer-btn' onClick={handleOpen}>@Timothy Doan 2025</button></footer>
         </Col>
         <Col md = '9' xs = '6'>
           <a href='https://www.linkedin.com/in/timothy-doan-4703b3213/' target={"_blank"}><LinkedInIcon style={{ color: "black", fontSize: 35,  marginRight: '20px'}}/></a>
