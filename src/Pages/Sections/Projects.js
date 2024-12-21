@@ -38,44 +38,68 @@ function Projects() {
           </Row>
         <div className='projects-row'>
         <Container>
-          {projects.map((data) => {
-            return(
-             <div data-aos="fade-up">
-              <Row>
-                <Col md = "6" xs = "12" style={{ justifyContent: 'right' }}>
-                  <img className='project-image' src={data.imageLink}/>
-                </Col>
-                <Col md = "6" xs = "12">
-                 <div className='project-box'>
-                  <div className='project-info'>
-                    <Row>
-                        <Col className='buttons'>
-                          {data.link!== "" || data.videoLink !== ""?<a href= {data.link != null? data.videoLink: data.link} target = "_blank"><button className='button-icon' ><LanguageIcon style={{ color: "black", marginLeft: "10px"}}/></button></a>:""}
-                          <a href = {data.gitLink} target = "_blank"><button className='button-icon'><GitHubIcon style={{ color: "black"}}/></button></a>
-                        </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <h3 className='project-name'><b>{data.name}</b></h3>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <p className='project-description'>{data.description}</p>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <p className='project-languages'>{data.languages}</p>
-                      </Col>
-                    </Row>
-                  </div>
-                 </div>
-                </Col>
-
-              </Row>
-              </div>
-            )
+          {projects.map((data, index) => {
+            if (index % 2 === 0) {
+              return (
+                <Row key={index} data-aos="fade-up" className="project-row">
+                  <Col md= "6" xs= "12" className="project-card">
+                    <div className="project-content">
+                      <img className="project-image" src={data.imageLink} alt={`Project ${index}`} />
+                      <div className="project-header">
+                        <h3 className="project-name"><b>{data.name}</b></h3>
+                        <div className="project-buttons">
+                          {data.link || data.videoLink ? (
+                            <a href={data.link || data.videoLink} target="_blank" rel="noopener noreferrer">
+                              <button className="button-icon">
+                                <LanguageIcon style={{ color: "black", marginLeft: "10px" }} />
+                              </button>
+                            </a>
+                          ) : null}
+                          {data.gitLink && (
+                            <a href={data.gitLink} target="_blank" rel="noopener noreferrer">
+                              <button className="button-icon">
+                                <GitHubIcon style={{ color: "black" }} />
+                              </button>
+                            </a>
+                          )}
+                          </div>
+                      </div>
+                      <p className="project-description">{data.description}</p>
+                      <p className="project-languages">{data.languages}</p>
+                    </div>
+                  </Col>
+                  {projects[index + 1] && (
+                    <Col md= "6" xs= "12" className="project-card">
+                      <div className="project-content">
+                        <img className="project-image" src={projects[index + 1].imageLink} alt={`Project ${index + 1}`} />
+                        <div className="project-header">
+                          <h3 className="project-name"><b>{projects[index + 1].name}</b></h3>
+                          <div className="project-buttons">
+                            {projects[index + 1].link || projects[index + 1].videoLink ? (
+                              <a href={projects[index + 1].link || projects[index + 1].videoLink} target="_blank" rel="noopener noreferrer">
+                                <button className="button-icon">
+                                  <LanguageIcon style={{ color: "black", marginLeft: "10px" }} />
+                                </button>
+                              </a>
+                            ) : null}
+                            {projects[index + 1].gitLink && (
+                              <a href={projects[index + 1].gitLink} target="_blank" rel="noopener noreferrer">
+                                <button className="button-icon">
+                                  <GitHubIcon style={{ color: "black" }} />
+                                </button>
+                              </a>
+                            )}
+                            </div>
+                        </div>
+                        <p className="project-description">{projects[index + 1].description}</p>
+                        <p className="project-languages">{projects[index + 1].languages}</p>
+                      </div>
+                    </Col>
+                  )}
+                </Row>
+              );
+            }
+            return null;
           })}
           </Container>
         </div>

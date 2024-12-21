@@ -14,6 +14,18 @@ import headshot from "../../../src/Images/hpe.jpg"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
+import C from "../../../src/Icons/C.png"
+import Python from "../../../src/Icons/python.png"
+import Java from "../../../src/Icons/java.png"
+import Javascript from "../../../src/Icons/javascript.png"
+import ReactJS from "../../../src/Icons/react.png"
+import Node from "../../../src/Icons/node.png"
+import Typescript from "../../../src/Icons/typescript.png"
+import PostgreSQL from "../../../src/Icons/postgresql.png"
+import Linux from "../../../src/Icons/linux.png"
+import Git from "../../../src/Icons/git.png"
+
+
 
 const About = () => {
     useEffect(() => {
@@ -48,6 +60,51 @@ const About = () => {
                             <br/><br/>During my time in college, I completed four internships, where I gained valuable experience in both IT and Software Engineering.
                             I'm always eager to learn new technologies, take on complex projects, and expand my skills across different domains.</p>
                         </Row>
+                        <div className="about-skills"  data-aos="fade-up">
+                            <Row>
+                                <Row>
+                                    <h4>Skillset</h4>
+                                </Row>
+                                <Row>
+                                    <Col md = "3" xs = "3">
+                                    <img src={Python} alt="Python" className="about-icon" />
+
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={C} alt="C" className="about-icon" />
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={Java} alt="Java" className="about-icon" />
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={Javascript} alt="Javascript" className="about-icon" />
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col md = "3" xs = "3">
+                                        <img src={Linux} alt="Linux" className="about-icon" />
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={Git} alt="Git" className="about-icon" />
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={ReactJS} alt="React" className="about-icon" />
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={Node} alt="Node" className="about-icon" />
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col md = "3" xs = "3">
+                                        <img src={Typescript} alt="TS" className="about-icon" />
+                                    </Col>
+                                    <Col md = "3" xs = "3">
+                                        <img src={PostgreSQL} alt="Postgresql" className="about-icon" />
+                                    </Col>
+                                </Row>
+                            </Row>
+                        </div>
+                        
                     </div>
                 </Col>
                 <Col md = "5" xs = "12">
