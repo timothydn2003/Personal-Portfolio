@@ -53,10 +53,10 @@ const About = () => {
                             <hr style={{width: '40%', color: 'black', borderTop:'4px solid', marginLeft: '15px'}}/>
                         </Row>
                         <Row>
-                            <p className="about-p">Hi, I'm Timothy. I'm currently a Software Engineer @ <b style={{color: '#1D539A'}}>HPE Aruba Networking</b>, working on the Layer 3 team. I'm also a recent Computer Science graduate from 
-                            <b style={{color: '#1D539A'}}> California State University, Sacramento</b>. 
-                            <br/><br/>I have a passion for systems and embedded software engineering, and I enjoy tackling low-level challenges that require efficient and scalable solutions. Additionally, 
-                            I have a strong interest in full-stack development, which allows me to combine creative problem-solving with building user-facing applications. 
+                            <p className="about-p">Hi, I'm Timothy. I'm currently a Software Engineer @ <b style={{color: '#1D539A'}}>HPE Aruba Networking</b>, working on the Layer 3 team. I'm also a recent Computer Science graduate from
+                            <b style={{color: '#1D539A'}}> California State University, Sacramento</b>.
+                            <br/><br/>I have a passion for systems and embedded software engineering, and I enjoy tackling low-level challenges that require efficient and scalable solutions. Additionally,
+                            I have a strong interest in full-stack development, which allows me to combine creative problem-solving with building user-facing applications.
                             <br/><br/>During my time in college, I completed four internships, where I gained valuable experience in both IT and Software Engineering.
                             I'm always eager to learn new technologies, take on complex projects, and expand my skills across different domains.</p>
                         </Row>
