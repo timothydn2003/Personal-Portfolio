@@ -64,6 +64,7 @@ const About = () => {
                             <Row>
                                 <Row>
                                     <h4>Skillset</h4>
+                                    <hr style={{width: '20%', color: 'black', borderTop:'4px solid', marginLeft: '12x'}}/>
                                 </Row>
                                 <Row>
                                     <Col md = "3" xs = "3">
