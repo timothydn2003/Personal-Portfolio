@@ -60,52 +60,51 @@ const About = () => {
                             <br/><br/>During my time in college, I completed four internships, where I gained valuable experience in both IT and Software Engineering.
                             I'm always eager to learn new technologies, take on complex projects, and expand my skills across different domains.</p>
                         </Row>
-                        <div className="about-skills"  data-aos="fade-up">
+                    </div>
+                    <div className="about-skills"  data-aos="fade-up">
+                        <Row>
                             <Row>
-                                <Row>
-                                    <h4>Skillset</h4>
-                                    <hr style={{width: '20%', color: 'black', borderTop:'4px solid', marginLeft: '12x'}}/>
-                                </Row>
-                                <Row>
-                                    <Col md = "3" xs = "3">
-                                    <img src={Python} alt="Python" className="about-icon" />
-
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={C} alt="C" className="about-icon" />
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={Java} alt="Java" className="about-icon" />
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={Javascript} alt="Javascript" className="about-icon" />
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col md = "3" xs = "3">
-                                        <img src={Linux} alt="Linux" className="about-icon" />
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={Git} alt="Git" className="about-icon" />
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={ReactJS} alt="React" className="about-icon" />
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={Node} alt="Node" className="about-icon" />
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col md = "3" xs = "3">
-                                        <img src={Typescript} alt="TS" className="about-icon" />
-                                    </Col>
-                                    <Col md = "3" xs = "3">
-                                        <img src={PostgreSQL} alt="Postgresql" className="about-icon" />
-                                    </Col>
-                                </Row>
+                                <h4>Skillset</h4>
+                                <hr style={{width: '20%', color: 'black', borderTop:'4px solid', marginLeft: '12px', paddingLeft: "12px"}}/>
                             </Row>
-                        </div>
-                        
+                            <Row>
+                                <Col md = "3" xs = "3">
+                                <img src={Python} alt="Python" className="about-icon" />
+
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={C} alt="C" className="about-icon" />
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={Java} alt="Java" className="about-icon" />
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={Javascript} alt="Javascript" className="about-icon" />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md = "3" xs = "3">
+                                    <img src={Linux} alt="Linux" className="about-icon" />
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={Git} alt="Git" className="about-icon" />
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={ReactJS} alt="React" className="about-icon" />
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={Node} alt="Node" className="about-icon" />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md = "3" xs = "3">
+                                    <img src={Typescript} alt="TS" className="about-icon" />
+                                </Col>
+                                <Col md = "3" xs = "3">
+                                    <img src={PostgreSQL} alt="Postgresql" className="about-icon" />
+                                </Col>
+                            </Row>
+                        </Row>
                     </div>
                 </Col>
                 <Col md = "5" xs = "12">
