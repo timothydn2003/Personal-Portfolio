@@ -269,7 +269,7 @@ h2{
 }
 
 .about-p{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -279,7 +279,14 @@ h2{
 }
 .about-img{
   margin-top: 10vh;
+  padding-left: 12px;
+  padding-right: 0px;
   background-color: transparent;
+}
+.about-timeline{
+  margin-top: 10vh;
+  padding-left: 12px;
+  padding-right: 0px;
 }
 .about-headshot{
   width: 80% !important;
@@ -381,6 +388,9 @@ h2{
     height: 40% !important;
     margin-left: auto;
     margin-right: auto
+  }
+  .about-timeline{
+    margin-top: 5vh;
   }
 }
 @media only screen and (max-width:540px){

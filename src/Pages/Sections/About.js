@@ -51,7 +51,7 @@ const About = () => {
                     </div>
                 </Col>
                 <Col md = "5" xs = "12">
-                    <div className="about-img" data-aos="fade-up">
+                    <div className="about-timeline" data-aos="fade-up">
                         <Timeline position="alternate">
                         <TimelineItem>
                                 <TimelineOppositeContent

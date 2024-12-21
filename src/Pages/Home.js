@@ -12,7 +12,6 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import ParticlesBackground from '../Particles/ParticlesBackground';
 import Contact from './Sections/Contact';
-import Experience from './Sections/Experience';
 import About from './Sections/About';
 
 export const AppContext = createContext();
