@@ -276,14 +276,15 @@ h2{
 .about-p{
   font-size: 17px;
   font-weight: 500;
-  border: 2px #2C5E76 solid;
+  border: 2px rgba(0, 0, 0, 0.3) solid;
   border-radius: 2rem;
   padding: 1rem;
-  box-shadow: -20px 10px 0px 0px #2C5E76;
+  box-shadow: -20px 10px 0px 0px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 .about-p:hover{
   box-shadow: -25px 15px 3px 0px #2C5E76;
+  border: 2px #2C5E76 solid;
   transform: translateY(-10px);
 }
 .about-skills{
