@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import ParticlesBackground from '../Particles/ParticlesBackground';
 import Contact from './Sections/Contact';
 import Experience from './Sections/Experience';
+import About from './Sections/About';
 
 export const AppContext = createContext();
 const Home = (props) => {
@@ -45,11 +46,11 @@ const Home = (props) => {
            {props.login?<Navigation2 logout = {logout}/>:<Navigation/>}
             <Landing />
           </section>
+          <section id='about-page'>
+            <About/>
+          </section>
           <section id='projects-page'>
             <Projects/>
-          </section>
-          <section id='experience-page'>
-            <Experience/>
           </section>
           <section id='contact-page'>
             <Contact/>

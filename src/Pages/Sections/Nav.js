@@ -16,9 +16,9 @@ function Navigation() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#projects-page">projects</Nav.Link>
-            <Nav.Link eventKey={2} href="#experience-page">
-              experience
+            <Nav.Link href="#about-page">about</Nav.Link>
+            <Nav.Link eventKey={2} href="#projects-page">
+              projects
             </Nav.Link>
             <Nav.Link eventKey={2} href="#contact-page">
               contact
