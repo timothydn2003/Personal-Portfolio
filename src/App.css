@@ -276,23 +276,32 @@ h2{
 .about-p{
   font-size: 17px;
   font-weight: 500;
+  border: 2px #2C5E76 solid;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: -20px 10px 0px 0px #2C5E76;
+  transition: all 0.3s ease;
+}
+.about-p:hover{
+  box-shadow: -25px 15px 3px 0px #2C5E76;
+  transform: translateY(-10px);
 }
 .about-skills{
   margin-top: 2vh;
   background-color: transparent;
 }
 .about-content{
-  margin-top: 10vh;
+  margin-top: 5vh;
   background-color: #cdd8e1;
 }
 .about-img{
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding-left: 12px;
   padding-right: 0px;
   background-color: transparent;
 }
 .about-timeline{
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding-left: 12px;
   padding-right: 0px;
 }
@@ -311,10 +320,15 @@ h2{
 .about-icon{
   margin-top: 7px;
   transition: transform 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 3rem;
+  padding: .4rem;
+  background-color: #cdd8e1;
 }
 
 .about-icon:hover{
   transform: rotate(360deg);
+  box-shadow: 0 6px 20px #2C5E76;
 }
 
 @media only screen and (max-width:820px){
@@ -383,7 +397,11 @@ h2{
   .about-p{
     font-size: 13px;
     font-weight: 500;
+    box-shadow: none;
   } 
+  .about-p:hover{
+    box-shadow: none;
+  }
   .about-content{
     margin-top: 5vh;
     background-color: #cdd8e1;
