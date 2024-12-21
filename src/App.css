@@ -79,9 +79,9 @@ h2{
 }
 
 .project-card {
-  width: 40% !important; 
+  width: 40% !important;
   padding-top: 10px;
-  margin: 20px auto; 
+  margin: 20px auto;
   background-color: #cdd8e1;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -272,14 +272,18 @@ h2{
 .a-resume-btn:hover{
   color: black;
 }
-
+.about-content{
+  margin-top: 5vh;
+  background-color: #cdd8e1;
+}
 .about-p{
   font-size: 17px;
   font-weight: 500;
-  border: 2px rgba(0, 0, 0, 0.3) solid;
+  border: 2px #99A2A8 solid;
   border-radius: 2rem;
   padding: 1rem;
-  box-shadow: -20px 10px 0px 0px rgba(0, 0, 0, 0.3);
+  background-color: #cdd8e1;
+  box-shadow: -20px 10px 0px 0px #99A2A8;
   transition: all 0.3s ease;
 }
 .about-p:hover{
@@ -291,10 +295,7 @@ h2{
   margin-top: 2vh;
   background-color: transparent;
 }
-.about-content{
-  margin-top: 5vh;
-  background-color: #cdd8e1;
-}
+
 .about-img{
   margin-top: 5vh;
   padding-left: 12px;
@@ -389,9 +390,6 @@ h2{
     font-weight: 600;
     color: #1D539A;
   }
-  .spline-object{
-    height: 55vh;
-  }
   .experience-timeline{
     margin-top: 15vh;
   }
@@ -399,9 +397,10 @@ h2{
     font-size: 13px;
     font-weight: 500;
     box-shadow: none;
-  } 
+  }
   .about-p:hover{
     box-shadow: none;
+    transform: none;
   }
   .about-content{
     margin-top: 5vh;
@@ -454,9 +453,6 @@ h2{
 }
 
 @media only screen and (max-width:414px){
-  .spline-object{
-    height: 40vh;
-  }
   .experience-logo{
     width: 4em !important;
     height: 4em !important;
