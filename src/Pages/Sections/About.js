@@ -11,6 +11,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import smudLogo from "../../../src/Images/smud.jpeg"
 import hpeLogo from "../../../src/Images/hpe.png"
 import headshot from "../../../src/Images/hpe.jpg"
+import sacstate from "../../../src/Images/SacState.png"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
@@ -128,6 +129,27 @@ const About = () => {
                                     <div className='experience-content2'>
                                         <b>Hewlett Packard Enterprise</b><br/>
                                         <h8>Software Engineer</h8>
+                                    </div>
+                                </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                                <TimelineOppositeContent
+                                sx={{ m: 'auto 0' }}
+                                align="right"
+                                variant="body2"
+                                color="text.secondary"
+                                >
+                                Aug 2021 - Dec 2024
+                                </TimelineOppositeContent>
+                                <TimelineSeparator>
+                                    <TimelineConnector />
+                                        <img className = "experience-logo" src={sacstate}/>
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent sx={{ py: '25px', px: 2 }}>
+                                    <div className='experience-content2'>
+                                        <b>Graduated from Sac State</b><br/>
+                                        <h8>B.S. in Computer Science</h8>
                                     </div>
                                 </TimelineContent>
                         </TimelineItem>

@@ -22,7 +22,6 @@ body {
 .landing-page{
   margin-top: 25vh;
   text-align: center;
-
 }
 .Typewriter{
   font-size: 75px;
@@ -36,6 +35,22 @@ body {
 .landing-page p{
   font-size: 20px;
   color: #687883;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 20px; /* Adjust spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0); /* Start and end at original position */
+  }
+  50% {
+    transform: translate(-50%, -20px); /* Move 10px upwards at mid-point */
+  }
 }
 .navbar-home{
   background-color: transparent;
