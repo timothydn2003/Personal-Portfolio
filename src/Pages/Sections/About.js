@@ -69,39 +69,38 @@ const About = () => {
                                 <hr style={{width: '20%', color: 'black', borderTop:'4px solid', marginLeft: '12px', paddingLeft: "12px"}}/>
                             </Row>
                             <Row>
-                                <Col md = "3" xs = "3">
-                                <img src={Python} alt="Python" className="about-icon" />
-
+                                <Col md = "3" xs = "3" className="skill-item">
+                                    <img src={Python} alt="Python" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={C} alt="C" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={Java} alt="Java" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={Javascript} alt="Javascript" className="about-icon" />
                                 </Col>
                             </Row>
                             <Row>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={Linux} alt="Linux" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={Git} alt="Git" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={ReactJS} alt="React" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={Node} alt="Node" className="about-icon" />
                                 </Col>
                             </Row>
                             <Row>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={Typescript} alt="TS" className="about-icon" />
                                 </Col>
-                                <Col md = "3" xs = "3">
+                                <Col md = "3" xs = "3" className="skill-item">
                                     <img src={PostgreSQL} alt="Postgresql" className="about-icon" />
                                 </Col>
                             </Row>

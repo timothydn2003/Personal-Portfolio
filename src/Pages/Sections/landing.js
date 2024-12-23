@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import Button from '@mui/material/Button';
 import '../../App.css'
 import Typewriter from 'typewriter-effect'
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Landing() {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
 
   return (
     <div className='landing-page'>
-      <Container>
+      <Container data-aos="fade-in">
         <h1>Hello, I'm<br></br></h1>
         <Typewriter options={{
           strings:['Timothy Doan.'],

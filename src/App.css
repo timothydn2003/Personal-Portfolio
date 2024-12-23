@@ -11,6 +11,27 @@ body {
   height: 100%;
   background-color: transparent;
 }
+.loading-page {
+  background-color: #cdd8e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logo{
+  width: auto;
+  height: 25%;
+  animation: pulsate 1.5s infinite ease-in-out;
+}
+@keyframes pulsate {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Slightly larger at the mid-point */
+  }
+}
+
 #landing-page{
   height: 100vh;
   background-color: transparent;
@@ -335,7 +356,7 @@ h2{
 }
 
 .about-icon{
-  margin-top: 7px;
+  margin-bottom: 10px;
   transition: transform 0.5s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 3rem;
